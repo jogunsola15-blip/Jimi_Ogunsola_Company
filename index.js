@@ -86,7 +86,7 @@ const propertyPhotos = [
 let currentIndex = 0;
 
 function updateGalleryDisplay() {
-    const mainImg = document.getElementById('mainPropImg1');
+    const mainImg = document.getElementById('main-image');
     mainImg.src = propertyPhotos[currentIndex];
 
     // Highlight active thumbnail
@@ -127,4 +127,23 @@ function openLightbox(src) {
 
 function closeLightbox() {
     document.getElementById('lightboxModal').style.display = "none";
+}
+// Open Lightbox Zoom
+function triggerZoom() {
+    const mainImg = document.getElementById('main-image');
+    const modal = document.getElementById('lightboxModal');
+    const lightboxImg = document.getElementById('lightboxImg');
+
+    if (mainImg && modal && lightboxImg) {
+        lightboxImg.src = mainImg.src;
+        modal.style.display = 'flex';
+    }
+}
+
+// Close Lightbox Zoom
+function closeLightbox() {
+    const modal = document.getElementById('lightboxModal');
+    if (modal) {
+        modal.style.display = 'none';
+    }
 }
