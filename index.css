@@ -1,4 +1,11 @@
+* {
+  box-sizing: border-box;
+}
 
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
 /* --- HCI Foundations & Reset --- */
 * {
     box-sizing: border-box;
